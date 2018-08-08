@@ -30,8 +30,20 @@
 */
 
 //Code Here
-
-
+class Employee{
+  constructor(first_name, last_name, email, age){
+    this.first_name = first_name
+    this.last_name = last_name
+    this.email = email
+    this.age = age
+  }
+  makeWidget(){
+     return `${this.first_name} ${this.last_name} Widget`
+  }
+}
+const employee1 = new Employee("Ashley", "Nguyen", "agnguyen@yahoo.com", 24)
+employee1.makeWidget()
+console.log(employee1)
 
 ////////// PROBLEM 2 //////////
 
@@ -51,6 +63,7 @@
 
 //Code Here
 
+var manager = Object.assign({}, first_name, last_name, email, age)
 
 
 ////////// PROBLEM 3 //////////
