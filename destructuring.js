@@ -22,7 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-
+const {color, make, model, year} = carDetails;
 
 
 ////////// PROBLEM 2 //////////
@@ -35,7 +35,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {firstName, lastName, title} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -57,6 +57,14 @@ function greeting( obj ) {
 
 
 
+
+function totalPopulation(obj){
+  const {utah, california, texas, arizona} = obj;
+return utah + california +texas + arizona
+}
+
+
+
 ////////// PROBLEM 4 //////////
 
 /*
@@ -68,7 +76,12 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function ingredients(obj){
+  const {carb, fat, protein} = obj;
+  const arr = [];
+  arr.push(carb, fat, protein)
+  return arr
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -78,7 +91,7 @@ function greeting( obj ) {
   Example:
     function example( {one, two, three} ) {
       return one + two + three
-    }
+    }but
 
   Write a function called largeNumbers that will take a destructured object as it's parameter.
   The object properties will be named first, second, and third and their values will be numbers.
@@ -86,7 +99,15 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function largeNumbers( {first, second, third} ){
+  var arr = [];
+  for (var key in obj){
+  arr.push(obj[key]);
+  var orderedArr = arr.sort(function(a,b){return a - b})
+  var smallest = orderedArr[0];
+  }
+  return smallest
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -98,5 +119,12 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+function numberGroups({a, b, c}){
+  if(a.length > b.length && a.length > c.length){
+    return a
+  } else if(b.length > a.length && b.length > c.length){
+    return b
+  } else if(c.length >a.length && c.length > b.length){
+    return c
+  }
+}
