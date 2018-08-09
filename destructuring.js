@@ -100,13 +100,13 @@ function ingredients(obj){
 
 //Code Here
 function largeNumbers( {first, second, third} ){
-  var arr = [];
-  for (var key in obj){
-  arr.push(obj[key]);
-  var orderedArr = arr.sort(function(a,b){return a - b})
-  var smallest = orderedArr[0];
+  if(first<second && first<third){
+    return first
+  } else if (second<first && second<third){
+    return second
+  } else if (third<first && third<second){
+    return third
   }
-  return smallest
 }
 
 
